@@ -1,29 +1,31 @@
 <?php
 
-    $NOME = $_REQUEST ['NOME'];
-    $ANIMAL =$_REQUEST ['ANIMAL'];
+    $NOME = $_REQUEST['NOME'];
+    $ANIMAL = $_REQUEST['ANIMAL'];
 
     if(empty($NOME)){
+        
         $dados = array(
             "tipo" => 'error',
-            "mensagem" => 'Existe(m) campo(s) a ser(em) preenchido(s).'
+            "mensagem" => 'Existem(m) campo(s) obrigatório(s) não preenchido(s).'
         );
-    }else{
+    
+    } else {
 
         switch($ANIMAL){
-            case '1': $dados = array(
-                "tipo" => 'cachorro.png',
-                "mensagem" => 'Seja bem  vindo, '.$NOME.' , sabemos que o seu animal de preferência é o cachorro'
+            case '1' : $dados = array(
+                "tipo" => 'cachorro.jpg',
+                "mensagem" => 'Olá '.$NOME.', sabemos que seu animal preferido é o cachorro'
             );
             break;
-            case '2': $dados = array(
-                "tipo" => 'gato.png',
-                "mensagem" => 'Seja bem  vindo, '.$NOME.' , sabemos que o seu animal de preferência é o gato'
+            case '2' : $dados = array(
+                "tipo" => 'gato.jpg',
+                "mensagem" => 'Olá '.$NOME.', sabemos que seu animal preferido é o gato'
             );
             break;
-            case '3': $dados = array(
-                "tipo" => 'peixe.png',
-                "mensagem" => 'Seja bem  vindo, '.$NOME.' , sabemos que o seu animal de preferência é o peixe'
+            case '3' : $dados = array(
+                "tipo" => 'peixe.jpg',
+                "mensagem" => 'Olá '.$NOME.', sabemos que seu animal preferido é o peixe'
             );
             break;
         }
