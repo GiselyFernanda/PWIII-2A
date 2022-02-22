@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-    $('.btn-send').clic(function(e){
-        e.preventDefaut()
+    $('.btn-send').click(function(e){
+        e.preventDefault()
 
         alert('Você clicou no botão enviar!!!')
     })
