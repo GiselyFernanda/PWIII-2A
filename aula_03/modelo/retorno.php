@@ -15,12 +15,12 @@ if (empty($NOME)) {
     if ($IDADE->format('%y') >= 18) {
         $dados = array(
             "B4" => 'alert-success',
-            "mensagem" => 'Bem vindo, ' . $NOME . ', A sua bebida favorita é: ' . $BEBIDA
+            "mensagem" => 'Bem vindo, ' . $NOME . ', A sua bebida favorita é ' . $BEBIDA . ', acesso livre as bebidas por ser de maior. '
         );
     } else {
         $dados = array(
-            "B4" => 'alert-danger',
-            "mensagem" => 'Ola ' . $NOME . ', você é de menor!'
+            "B4" => 'alert-success',
+            "mensagem" => 'Ola' . $NOME . ', você é menor de idade então não consuma bebida alcoólica!'
         );
     }
 
